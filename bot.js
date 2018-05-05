@@ -15,6 +15,13 @@ client.on('message', message => {
   }  
 });
 
+  client.on('message', async msg => {
+  if (msg.content.toLowerCase() === 'sa') {
+    await msg.react('🇦');
+    msg.react('🇸');
+  }
+  });
+
 client.on('message', message => {
   if (message.content === prefix + 'abone ol') {
     message.channel.send('https://www.youtube.com/channel/UCCMnMpRipcSwt865ZEFDong');
