@@ -30,7 +30,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('https://www.youtube.com/watch?v=OtenlammMqI');
+    message.reply('https://www.youtube.com/watch?v=Tb2KzuNKuJY');
   }  
 });
 
