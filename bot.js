@@ -36,7 +36,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === 'toprak') {
-    message.reply('YEtkisini isteyen bir masum ve benim Yapımcım');
+    message.channel.sendMessage('Yetkisini isteyen bir masum ve benim Yapımcım');
   }  
 });
 
