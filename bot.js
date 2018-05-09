@@ -34,4 +34,10 @@ client.on('message', message => {
   }  
 });
 
+client.on('message', message => {
+  if (message.content === 'toprak') {
+    message.reply('YEtkisini isteyen bir masum ve benim Yapımcım');
+  }  
+});
+
 client.login('NDI5MzQ1NzA4ODUyNzcyODc0.DdRZFg.cEodkIrAuZ1P4-QtAlBo2jItQB0');
