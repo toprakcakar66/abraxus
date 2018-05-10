@@ -11,7 +11,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === prefix + 'son video') {
-    message.channel.send('https://www.youtube.com/watch?v=PFXio9jrLo0');
+    message.channel.send('https://www.youtube.com/watch?v=XAXvndBxQ7I');
   }  
 });
 
