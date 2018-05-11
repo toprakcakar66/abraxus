@@ -17,7 +17,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === 'baban') {
-    message.channel.send('Benim babam Toprak')
+    message.channel.send('Benim babam Toprak');
   }  
 });
 
