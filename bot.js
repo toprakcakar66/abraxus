@@ -15,6 +15,12 @@ client.on('message', message => {
   }  
 });
 
+client.on('message', message => {
+  if (message.content === 'baban') {
+    message.channel.send('Benim babam Toprak'
+  }  
+});
+
   client.on('message', async msg => {
   if (msg.content.toLowerCase() === 'sa') {
     await msg.react('🇦');
