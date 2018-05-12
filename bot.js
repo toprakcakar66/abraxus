@@ -30,7 +30,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'abone ol') {
-    message.channel.send('https://www.youtube.com/channel/UCCMnMpRipcSwt865ZEFDong');
+    message.channel.send('YAYINDA DEĞİL');
   }  
 });
 
