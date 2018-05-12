@@ -30,25 +30,13 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'abone ol') {
-    message.channel.send('YAYINDA DEĞİL');
+    message.channel.send('https://www.youtube.com/channel/UCCMnMpRipcSwt865ZEFDong');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('https://www.youtube.com/watch?v=Tb2KzuNKuJY');
-  }  
-});
-
-client.on('message', message => {
-  if (message.content === 'toprak') {
-    message.channel.sendMessage('Yetkisini isteyen bir masum ve benim Yapımcım');
-  }  
-});
-
-client.on('message', message => {
-  if (message.content === 'yiğit') {
-    message.channel.sendMessage('Kaslı yakışıklı ama Topraka yetkisini vermeyen bir kurucu');
+    message.reply('Yayında Değil');
   }  
 });
 
