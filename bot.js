@@ -23,7 +23,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content.toLowerCase() === 'toprak') {
-    message.channel.send('@ABRAXUS#4091  yüzünden ağlıyor');
+    message.channel.send('@ABRAXUS  yüzünden ağlıyor');
   }  
 });
 
