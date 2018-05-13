@@ -21,6 +21,12 @@ client.on('message', message => {
   }  
 });
 
+client.on('message', message => {
+  if (message.content.toLowerCase() === 'toprak') {
+    message.channel.send('@ABRAXUS#4091  yüzünden ağlıyor');
+  }  
+});
+
   client.on('message', async msg => {
   if (msg.content.toLowerCase() === 'sa') {
     await msg.react('🇦');
@@ -40,4 +46,4 @@ client.on('message', message => {
   }  
 });
 
-client.login('YOK');
+client.login('NDI5MzQ1NzA4ODUyNzcyODc0.DdpSvA.r0Vx-wlKGwpeMfYrw5LexL7vcE0');
