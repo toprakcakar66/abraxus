@@ -19,18 +19,6 @@ client.on('message', message => {
   }  
 });
 
-client.on('message', msg => {
-  if (msg.content.startsWith(prefix + "yaz")) {
-    if (msg.channel.type !== "dm"){
-    let mesaj = msg.content.substring(2 + 3);
-    msg.delete (msg.content == 'yaz' + mesaj)
-    let embed = new Discord.RichEmbed()
-    .setColor("RANDOM")
-       .setDescription(mesaj)
-return msg.channel.send({embed})}
-    }
- });
-
 client.on('message', message => {
   if (message.content === prefix + 'botyaptır') {
     message.channel.send('Sunucuna özel botlar yapmak istiyorsan bana ulaş Toprak T#9528.Uygun fiyata anlaşılır yada ücretsiz olur.');
