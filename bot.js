@@ -36,7 +36,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('Yayında değil.Lütfen daha sonra yaz kardeşim.');
+    message.reply('Yayında değil');
   }  
 });
 
