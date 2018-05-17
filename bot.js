@@ -14,12 +14,6 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content === 'baban') {
-    message.channel.send('Benim babam Toprak');
-  }  
-});
-
-client.on('message', message => {
   if (message.content === prefix + 'botyaptır') {
     message.channel.send('Sunucuna özel botlar yapmak istiyorsan bana ulaş Toprak T#9528.Uygun fiyata anlaşılır yada ücretsiz olur.');
   }  
