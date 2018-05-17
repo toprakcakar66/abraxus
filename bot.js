@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+anaconst Discord = require('discord.js');
 const client = new Discord.Client();
 
 
@@ -14,6 +14,13 @@ client.on('message', message => {
     message.channel.send('https://www.youtube.com/watch?v=11y2ZtLu-ds');
   }  
 });
+
+client.on('message', message => {
+  if (message.content === prefix + 'yardım') {
+    message.channel.send('```Selam ben ABRAXUS buda komutlarım.\n a?yardım :Tüm komutları atar.\n a?son video :Son videoyu atar.\n a?abone ol :Abraxus Youtube kanalını atar.\n a?yayın :Yayın linkini atar.\n ABRAXUS botumuzun komutları bu kadardı\n Sende bot yaptırmak istiyorsan bana ulaş\nToprak T#9528```');
+  }  
+});
+
 
 client.on('message', message => {
   if (message.content === 'baban') {
@@ -36,7 +43,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('https://www.youtube.com/watch?v=UPuMOBQ_rao');
+    message.reply('Yayında değil.Lütfen daha sonra yaz kardeşim.');
   }  
 });
 
