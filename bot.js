@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-
-
 var prefix = 'a?'
 
 client.on('ready', () => {
@@ -20,6 +18,18 @@ client.on('message', message => {
     message.channel.send('Benim babam Toprak');
   }  
 });
+
+client.on('message', msg => {
+  if (msg.content.startsWith(prefix + "yaz")) {
+    if (msg.channel.type !== "dm"){
+    let mesaj = msg.content.substring(2 + 3);
+    msg.delete (msg.content == 'yaz' + mesaj)
+    let embed = new Discord.RichEmbed()
+    .setColor("RANDOM")
+       .setDescription(mesaj)
+return msg.channel.send({embed})}
+    }
+ });
 
 client.on('message', message => {
   if (message.content === prefix + 'botyaptır') {
