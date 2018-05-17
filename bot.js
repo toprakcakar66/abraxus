@@ -21,6 +21,12 @@ client.on('message', message => {
   }  
 });
 
+client.on('message', message => {
+  if (message.content === prefix + 'yardım') {
+    message.channel.send('```Selam ben ABRAXUS buda komutlarım.\n a?son video :Abraxus un son videosunu atar. \n a?abone ol :Abraxus Youtube kanalını atar.\n a?yayın :Abraxus yayında ise yayın linkini atar\n Sende suncuya özel bot istiyorsan bana ulaş\n Toprak T#9528```');
+  }  
+});
+
   client.on('message', async msg => {
   if (msg.content.toLowerCase() === 'sa') {
     await msg.react('🇦');
@@ -36,7 +42,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('Yayında değil');
+    message.reply('Yayında değil.Lütfen daha sonra tekrar yaz.');
   }  
 });
 
