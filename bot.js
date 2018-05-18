@@ -11,6 +11,27 @@ client.on('message', message => {
   if (message.content === prefix + 'son video') {
     message.channel.sendMessage('https://www.youtube.com/watch?v=11y2ZtLu-ds');
   }  
+  
+   if (msg.content.toLowerCase () === prefix + 'sunucubilgi') {
+   if (message.channel.type !== 'dm') {
+      const ozelmesajkontrol = new Discord.RichEmbed()
+      .setColor(0x00AE86)
+      .setTimestamp()
+      .setAuthor(message.author.username, message.author.avatarURL)
+      .setDescription(`${message.guild.name} suncusunun bilgilerini özelden attım`);
+      message.channel.sendEmbed(ozelmesajkontrol) }
+    const pingozel = new Discord.RichEmbed()
+      .setColor(0x00AE86)
+      .setTimestamp()
+      .setAuthor(message.author.username, message.author.avatarURL)
+      .addField('Sunucu Adı', message.guild.name, true)
+      .addField('Sunucu ID', message.guild.id, true)
+      .addField('Sunucu Sahibi', message.guild.owner, true)
+      .addField('Toplam Üye Sayısı', message.guild.memberCount, true)
+      .addField('AFK Süresi', message.guild.afkTimeout, true)
+      .addField('Oluşturulma Tarihi' + message.guild.createdAt)
+      return message.author.sendEmbed(pingozel)
+    }
 });
 
 client.on('message', message => {
