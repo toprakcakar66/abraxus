@@ -34,7 +34,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('https://www.youtube.com/watch?v=j_24vDxY6gw');
+    message.reply('Yayında değil.Daha sonra tekrar yaz.');
   }  
 });
 
