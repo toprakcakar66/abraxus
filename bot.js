@@ -25,31 +25,31 @@ client.on('guildMemberAdd', member => {
 
 client.on('message', message => {
   if (message.content === prefix + 'son video') {
-    message.channel.sendMessage('Bot not editable.');
+    message.channel.sendMessage('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'botyaptır') {
-    message.channel.send('Mal Toprak Yaptı işte');
+    message.channel.send('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
   }  
 });
 
 client.on('message', message => {
   if (message.content.toLowerCase() ==='sa') {
-    message.channel.send('Mal Toprak Yaptı işte');
+    message.channel.send('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'abone ol') {
-    message.channel.send('Mal Toprak Yaptı işte');
+    message.channel.send('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('Mal Toprak Yaptı işte');
+    message.reply('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
   }  
 });
 
