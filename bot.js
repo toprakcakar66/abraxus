@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
   let guild = member.guild;
-  let joinRole = guild.roles.find('name', 'BOT'); // Burada girişte verilcek rolu seçelim.
+  let joinRole = guild.roles.find('name', 'BOTLAR'); // Burada girişte verilcek rolu seçelim.
   member.addRole(joinRole); // seçtiğimiz rolu verelim.
 
   const channel = member.guild.channels.find('name', 'nomesajo'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
