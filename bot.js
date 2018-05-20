@@ -31,25 +31,25 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'botyaptır') {
-    message.channel.send('Bot not editable.');
+    message.channel.send('Mal Toprak Yaptı işte');
   }  
 });
 
 client.on('message', message => {
   if (message.content.toLowerCase() ==='sa') {
-    message.channel.send('Bot not editable.');
+    message.channel.send('Mal Toprak Yaptı işte');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'abone ol') {
-    message.channel.send('Bot not editable.');
+    message.channel.send('Mal Toprak Yaptı işte');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('Bot not editable.');
+    message.reply('Mal Toprak Yaptı işte');
   }  
 });
 
