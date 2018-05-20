@@ -20,7 +20,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content ==='sa') {
+  if (message.content.toLowerCase() ==='sa') {
     message.channel.send('Bot not editable.');
   }  
 });
