@@ -34,7 +34,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('Şu an yayında değil.Lütfen daha sonra tekrar yaz.');
+    message.reply('https://www.youtube.com/watch?v=j_24vDxY6gw');
   }  
 });
 
