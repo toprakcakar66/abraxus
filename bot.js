@@ -9,32 +9,31 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === prefix + 'son video') {
-    message.channel.sendMessage('https://www.youtube.com/watch?v=GjV5ff1P6gc');
+    message.channel.sendMessage('Bot not editable.');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'botyaptır') {
-    message.channel.send('Sunucuna özel botlar yapmak istiyorsan bana ulaş Toprak T#9528.Uygun fiyata anlaşılır yada ücretsiz olur.');
+    message.channel.send('Bot not editable.');
   }  
 });
 
-  client.on('message', async msg => {
-  if (msg.content.toLowerCase() === 'sa') {
-    await msg.react('🇦');
-    msg.react('🇸');
-  }
-  });
+client.on('message', message => {
+  if (message.content ==='sa') {
+    message.channel.send('Bot not editable.');
+  }  
+});
 
 client.on('message', message => {
   if (message.content === prefix + 'abone ol') {
-    message.channel.send('https://www.youtube.com/channel/UCCMnMpRipcSwt865ZEFDong');
+    message.channel.send('Bot not editable.');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('Yayında değil.Daha sonra tekrar yaz.');
+    message.reply('Bot not editable.');
   }  
 });
 
