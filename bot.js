@@ -23,6 +23,20 @@ client.on('guildMemberAdd', member => {
   channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
 });
 
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'temizle 100') {
+    msg.channel.bulkDelete(100);
+    msg.channel.sendMessage("100 adet mesaj silindi!");
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'temizle 10') {
+    msg.channel.bulkDelete(10);
+    msg.channel.sendMessage("10 adet mesaj silindi!");
+  }
+});
+
 client.on('message', message => {
   if (message.content === prefix + 'son video') {
     message.channel.sendMessage('https://www.youtube.com/watch?v=GjV5ff1P6gc');
