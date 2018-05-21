@@ -25,31 +25,25 @@ client.on('guildMemberAdd', member => {
 
 client.on('message', message => {
   if (message.content === prefix + 'son video') {
-    message.channel.sendMessage('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
-  }  
-});
-
-client.on('message', message => {
-  if (message.content === prefix + 'botyaptır') {
-    message.channel.send('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
+    message.channel.sendMessage('https://www.youtube.com/watch?v=GjV5ff1P6gc');
   }  
 });
 
 client.on('message', message => {
   if (message.content.toLowerCase() ==='sa') {
-    message.channel.send('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
+    message.channel.send('**Aleyküm Selam**');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'abone ol') {
-    message.channel.send('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
+    message.channel.send('https://www.youtube.com/channel/UCCMnMpRipcSwt865ZEFDong');
   }  
 });
 
 client.on('message', message => {
   if (message.content === prefix + 'yayın') {
-    message.reply('Sevmediğiniz yapımcının yapmış olduğu bozuk bir bot');
+    message.reply('Şu anda yayında değil.Daha sonra tekrar yaz.');
   }  
 });
 
