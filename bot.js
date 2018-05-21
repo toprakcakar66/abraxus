@@ -27,6 +27,12 @@ client.on('message', message => {
   if (message.content === prefix + 'son video') {
     message.channel.sendMessage('https://www.youtube.com/watch?v=GjV5ff1P6gc');
   }  
+  
+  if (msg.content.toLowerCase() === prefix + 'temizle') {
+    msg.channel.bulkDelete(100);
+    msg.channel.sendMessage("100 adet mesaj silindi!");
+  }
+  
 });
 
 client.on('message', message => {
