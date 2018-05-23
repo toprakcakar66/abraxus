@@ -20,7 +20,7 @@ client.on('guildMemberAdd', member => {
   .setThumbnail(member.user.avatarURL)
   .setTitle('📥 | Sunucuya katıldı!')
   .setTimestamp()
-  .setImage(`https://media1.tenor.com/images/5fb7ea92e953c6dea3c31c66f852569d/tenor.gif?itemid=10359622`)
+  .setImage(`https://resmim.net/preview/ZbAtdu.jpg`)
   channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
 });
 
