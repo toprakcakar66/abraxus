@@ -12,7 +12,7 @@ client.on('guildMemberAdd', member => {
   let joinRole = guild.roles.find('name', 'YOUI'); // Burada girişte verilcek rolu seçelim.
   member.addRole(joinRole); // seçtiğimiz rolu verelim.
 
-  const channel = member.guild.channels.find('name', 'nomesajo'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
+  const channel = member.guild.channels.find('name', 'sohbet'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -20,6 +20,7 @@ client.on('guildMemberAdd', member => {
   .setThumbnail(member.user.avatarURL)
   .setTitle('📥 | Sunucuya katıldı!')
   .setTimestamp()
+  .setImage(`https://media1.tenor.com/images/5fb7ea92e953c6dea3c31c66f852569d/tenor.gif?itemid=10359622`)
   channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
 });
 
