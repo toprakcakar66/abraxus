@@ -36,6 +36,17 @@ client.on('message', msg => {
     msg.channel.bulkDelete(10);
     msg.channel.sendMessage("10 adet mesaj silindi!");
   }
+  
+client.on('message', msg => {
+  if (message.content === prefix + "davet") {
+        const embed = new Discord.RichEmbed()
+
+            .addDescription("Abraxus Discordu davet linki [Tıkla](https://discord.gg/bHr3jZR=")
+
+            .setColor(0xff0000)
+
+        return message.channel.sendEmbed(embed)
+   }
 });
 
 client.on('message', message => {
