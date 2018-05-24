@@ -36,6 +36,7 @@ client.on('message', msg => {
     msg.channel.bulkDelete(10);
     msg.channel.sendMessage("10 adet mesaj silindi!");
   }
+});  
 
 client.on('message', message => {
   if (message.content === prefix + 'son video') {
