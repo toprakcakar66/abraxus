@@ -36,6 +36,16 @@ client.on('message', msg => {
   }
 });
 
+ client.on('message', msg => {
+   if (msg.content === prefix + "avatarım") {
+       const embed = new Discord.RichEmbed()
+           .setColor(0x85cfff)
+           .setImage(msg.author.avatarURL)
+           .setTitle(msg.author.tag, "İşte avatarın")
+        return msg.channel.send(embed)
+   }
+ });   
+
     client.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
     if (msg.channel.type !== "dm"){
