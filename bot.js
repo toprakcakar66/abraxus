@@ -7,6 +7,11 @@ client.on('ready', () => {
   console.log(`[BOT] ${client.user.tag} ADI İLE GİRİŞ YAPTI!`);
 });
 
+client.on('ready', () => {
+  client.user.setStatus("PLAYING"); // Aynı zamanda STREAMING: YAYINDA: WATCHING: İZLİYOR: DND: RAHATSIZ ETMEYİN GİBİ TERİMLERDE VARDIR
+  client.user.setActivity('Şu anda Yayında Olabilir', { type: "PLAYING"});  // Aynı zamanda STREAMING: YAYINDA: WATCHING: İZLİYOR: DND: RAHATSIZ ETMEYİN GİBİ TERİMLERDE VARDIR
+})
+
 client.on('guildMemberAdd', member => {
   let guild = member.guild;
   let joinRole = guild.roles.find('name', 'YOUI'); // Burada girişte verilcek rolu seçelim.
