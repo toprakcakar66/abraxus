@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('ready', () => {
   client.user.setStatus("PLAYING"); // Aynı zamanda STREAMING: YAYINDA: WATCHING: İZLİYOR: DND: RAHATSIZ ETMEYİN GİBİ TERİMLERDE VARDIR
-  client.user.setActivity('Şu anda Yayında Olabilir', { type: "PLAYING"});  // Aynı zamanda STREAMING: YAYINDA: WATCHING: İZLİYOR: DND: RAHATSIZ ETMEYİN GİBİ TERİMLERDE VARDIR
+  client.user.setActivity('Bir süre yayın yok!', { type: "PLAYING"});  // Aynı zamanda STREAMING: YAYINDA: WATCHING: İZLİYOR: DND: RAHATSIZ ETMEYİN GİBİ TERİMLERDE VARDIR
 })
 
 client.on('guildMemberAdd', member => {
