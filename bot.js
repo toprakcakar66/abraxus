@@ -47,7 +47,7 @@ client.on('message', msg => {
  });   
 
     client.on('message', msg => {
-  if (msg.content.startsWith(prefix + "yaz")) {
+  if (msg.content.startsWith(prefix + "özel")) {
     if (msg.channel.type !== "dm"){
     let mesaj = msg.content.substring(2 + 3);
     msg.delete (msg.content == 'yaz' + mesaj)
