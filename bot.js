@@ -8,8 +8,8 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-  client.user.setStatus("PLAYING"); // Aynı zamanda STREAMING: YAYINDA: WATCHING: İZLİYOR: DND: RAHATSIZ ETMEYİN GİBİ TERİMLERDE VARDIR
-  client.user.setActivity('Bir süre yayın yok!', { type: "PLAYING"});  // Aynı zamanda STREAMING: YAYINDA: WATCHING: İZLİYOR: DND: RAHATSIZ ETMEYİN GİBİ TERİMLERDE VARDIR
+  client.user.setStatus("ATCHING"); // Aynı zamanda STREAMING: YAYINDA: WATCHING: İZLİYOR: DND: RAHATSIZ ETMEYİN GİBİ TERİMLERDE VARDIR
+  client.user.setActivity('1 Haziranda yeni kanal açılıyor', { type: "PLAYING"});  // Aynı zamanda STREAMING: YAYINDA: WATCHING: İZLİYOR: DND: RAHATSIZ ETMEYİN GİBİ TERİMLERDE VARDIR
 })
 
 client.on('guildMemberAdd', member => {
