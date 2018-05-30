@@ -17,7 +17,7 @@ client.on('guildMemberAdd', member => {
   let joinRole = guild.roles.find('name', 'YOUI'); // Burada girişte verilcek rolu seçelim.
   member.addRole(joinRole); // seçtiğimiz rolu verelim.
 
-  const channel = member.guild.channels.find('name', 'sohbet'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
+  const channel = member.guild.channels.find('name', 'gelen-kisiler'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
