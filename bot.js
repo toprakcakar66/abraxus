@@ -23,7 +23,7 @@ client.on('guildMemberAdd', member => {
   .setColor('RANDOM')
   .setAuthor(member.user.username, member.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle('📥 | Sunucuya katıldı!')
+  .setTitle(`Sunucumuza Hoşgeldin ${member.user.username}|${client.users.size}Sunucudaki Kişi Sayısı`)
   .setTimestamp()
   .setImage(`https://resmim.net/preview/ZbAtdu.jpg`)
   channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
