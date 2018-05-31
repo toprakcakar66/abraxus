@@ -23,7 +23,7 @@ client.on('guildMemberAdd', member => {
   .setColor('RANDOM')
   .setAuthor(member.user.username, member.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle('Sunucumuza Hoşgeldin', client.users.size)
+  .setTitle('Hoşgeldin beş gittin bro', client.users.size, true)
   .setTimestamp()
   channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
 });
