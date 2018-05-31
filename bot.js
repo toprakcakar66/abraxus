@@ -73,7 +73,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content.toLowerCase() ==='sa') {
-    message.channel.send('**Aleyküm Selam**');
+    message.channel.send('**Küçük Toprak yetkisini istiyor çok mu ba.**');
   }  
 });
 
