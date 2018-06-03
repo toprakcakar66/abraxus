@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-var prefix = "ae!";
+var prefix = "ks!";
 var owner = "427061793123205131";
 
 client.on('ready', () => {
@@ -14,15 +14,17 @@ client.on('message', msg => {
    const embed = new Discord.RichEmbed()
    .addField(`Selam ben ${client.user.username}`, "Buda komutlarım")
 
-   .addField(`${prefix}aboneol`, `Adil ESER Youtube kanalının linkini atar.`)
+   .addField(`${prefix}aboneol`, `Kemal Eray Sönmez Youtube kanalının linkini atar.`)
 
    .addField(`${prefix}davulcusözü`, `Rastegele bir davulcu sözü atar.`)
 
    .addField(`${prefix}manisöyle`, `Rastgele bir mani sözü atar.`)
+   
+   .addField(`${prefix}platdesteaç`, `Platin deste açar.`)
 
-   .addField(`${prefix}rastgelevideo`, `Adil ESER'in videolarından birisini atar.`)
+   .addField(`${prefix}rastgeleyayın`, `Kemal Eray Sönmez'in yayınlardan birisini atar.`)
 
-   .addField(`${prefix}sonvideo`, `Adil ESER'in atmış olduğu en son vidoyu atar.`)
+   .addField(`${prefix}sonyayın`, `Kemal Eray Sönmez'in yapmış olduğu en son yayını atar atar.`)
 
    .addField(`${prefix}yayın`, `Yayın var mı yok mu onu söyler.`)
 
@@ -32,37 +34,60 @@ client.on('message', msg => {
    }
 });
 
+client.on('guildMemberAdd', member => {
+  let guild = member.guild;
+  let joinRole = guild.roles.find('name', 'Rhudaur TV Ailesi'); // Burada girişte verilcek rolu seçelim.
+  member.addRole(joinRole); // seçtiğimiz rolu verelim.
+
+  const channel = member.guild.channels.find('name', 'sohbt'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
+  if (!channel) return;
+  const embed = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setAuthor(member.user.username, member.user.avatarURL)
+  .setThumbnail(member.user.avatarURL)
+  .setTitle('Sende artık Şanslısın|HOŞGELDİN')
+  .setTimestamp()
+  channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
+});
+
 client.on('message', msg => {
   if (msg.content.toLocaleLowerCase() === "sa") {
     msg.reply(`**Aleyküm Selam**`)
   }
-  if (msg.content.toLocaleLowerCase() === prefix + "sonvideo") {
-      msg.channel.sendMessage('https://www.youtube.com/watch?v=iTKF3zrVwag')
+  
+  if (msg.content.toLocaleLowerCase() === prefix + "platdesteaç") {
+    msg.reply(`Platin deste açmak isteğinize emin misiniz?**r!evet/r!hayır**`)
+  }
+  if (msg.content.toLocaleLowerCase() === prefix + "hayır") {
+    msg.reply(`**Komutu kullandığınız için teşekkürler**.`)
+  }
+  if (msg.content.toLocaleLowerCase() === prefix + "sonyayın") {
+      msg.channel.sendMessage('https://www.youtube.com/watch?v=WuOXqYIzaNs')
   }
   if (msg.content.toLocaleLowerCase() === prefix + "aboneol") {
-    msg.channel.sendMessage('https://www.youtube.com/channel/UC0XoYr1k-1XcvqpYfBEPmjg')
+    msg.channel.sendMessage('https://www.youtube.com/channel/UCtE2HbdsE4Q6G1VKDGVItmA')
   }
-  if (msg.content === prefix + "rastgelevideo") {
+  if (msg.content === prefix + "rastgeleyayın") {
     function get_random(list) {
         return list[Math.floor((Math.random() * list.length))];
     }
 
-    var mesaj1 = "https://www.youtube.com/watch?v=iTKF3zrVwag"
-    var mesaj2 = "https://www.youtube.com/watch?v=JBYk4J02tcE"
-    var mesaj3 = "https://www.youtube.com/watch?v=EJIXW7ezfvo"
-    var mesaj4 = "https://www.youtube.com/watch?v=Vfc76YDdc2I"
-    var mesaj5 = "https://www.youtube.com/watch?v=E1fsTL4fQzI"
-    var mesaj6 = "https://www.youtube.com/watch?v=E1fsTL4fQzI"
-    var mesaj7 = "https://www.youtube.com/watch?v=QJLyT39275o"
+    var mesaj1 = "https://www.youtube.com/watch?v=WuOXqYIzaNs"
+    var mesaj2 = "https://www.youtube.com/watch?v=cPeDbA2c0-8"
+    var mesaj3 = "https://www.youtube.com/watch?v=0eCnlxZHhhw"
+    var mesaj4 = "https://www.youtube.com/watch?v=VC31LcRXSiU"
+    var mesaj5 = "https://www.youtube.com/watch?v=VC31LcRXSiU"
+    var mesaj6 = "https://www.youtube.com/watch?v=wBJ49fJvxjU"
+    var mesaj7 = "https://www.youtube.com/watch?v=WCsoupRK86g"
 
     let mesaj = [mesaj1, mesaj2, mesaj3, mesaj4, mesaj5, mesaj6, mesaj7]
     let sonuc = get_random(mesaj)
 
-    let embed = new Discord.RichEmbed()
+   let embed = new Discord.RichEmbed()
         .setColor("RANDOM")
-        .setTitle("Rastgele video")
+        .setTitle("Rastgele yayın")
         .setDescription(sonuc)
-    return msg.channel.send(embed)
+    return msg.channel.send(embed) 
 }
 if (msg.content === prefix + "davulcusözü") {
   function get_random(list) {
@@ -112,6 +137,28 @@ if (msg.content === prefix + "manisöyle") {
       .setDescription(sonuc)
   return msg.channel.send(embed)
 }
+if (msg.content.toLocaleLowerCase() === prefix + "evet") {
+  function get_random(list) {
+      return list[Math.floor((Math.random() * list.length))];
+  }
+
+  var mani1 = "https://i.imgyukle.com/2018/06/02/n0HDG.md.png"
+  var mani2 = "https://i.imgyukle.com/2018/06/02/n0OQb.md.png"
+  var mani3 = "https://i.imgyukle.com/2018/06/02/n0jgs.md.png"
+  var mani4 = "https://i.imgyukle.com/2018/06/02/n0X8Q.md.png"
+  var mani5 = "https://i.imgyukle.com/2018/06/02/n0got.md.png"
+  var mani6 = "https://i.imgyukle.com/2018/06/02/n0hLc.md.png"
+  var mani7 = ""
+
+  let mani = [mani1, mani2, mani3, mani4, mani5, mani6, mani7]
+  let sonuc = get_random(mani)
+
+  let embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setTitle("Hadi gene iyisin")
+      .setImage(sonuc)
+  return msg.channel.send(embed)
+}
  if (msg.content.toLowerCase() === prefix + "yayın") {
    msg.reply('şu anda yayın yok.Lütfen daha sonra tekrar dene.')
  }
@@ -122,7 +169,7 @@ client.on('guildMemberAdd', member => {
   let joinRole = guild.roles.find('name', 'Üye'); // Burada girişte verilcek rolu seçelim.
   member.addRole(joinRole); // seçtiğimiz rolu verelim.
 
-  const channel = member.guild.channels.find('name', 'gelen-kisiler'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
+  const channel = member.guild.channels.find('name', 'sohbet'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -133,20 +180,4 @@ client.on('guildMemberAdd', member => {
   channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
 });
 
-client.on('guildMemberAdd', member => {
-  let guild = member.guild;
-  let joinRole = guild.roles.find('name', 'Muted'); // Burada girişte verilcek rolu seçelim.
-  member.addRole(joinRole); // seçtiğimiz rolu verelim.
-
-  const channel = member.guild.channels.find('name', 'gelen-'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
-  if (!channel) return;
-  const embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .setAuthor(member.user.username, member.user.avatarURL)
-  .setThumbnail(member.user.avatarURL)
-  .setTitle('Kardeşim sunucumuza hoşgeldin.GÜZEL VAKİT GEÇİRMEN DİLEKLERİYLE')
-  .setTimestamp()
-  channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
-});
-
-client.login('NDUyMDQ1MjE0NDIxNjE0NTkz.DfKncQ.2UksOTXfVzAvQ2PBHPWIWN3Dxdc');
+client.login('NDUyNjA4MjYzMzM5NjM4Nzg0.DfXrYg.E__kThgbylsc2z-fx3js1V4gnBw');
