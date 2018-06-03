@@ -56,7 +56,7 @@ client.on('message', msg => {
   }
   
   if (msg.content.toLocaleLowerCase() === prefix + "platdesteaç") {
-    msg.reply(`Platin deste açmak isteğinize emin misiniz?**r!evet/r!hayır**`)
+    msg.reply(`Platin deste açmak isteğinize emin misiniz?**ks!evet/ks!hayır**`)
   }
   if (msg.content.toLocaleLowerCase() === prefix + "hayır") {
     msg.reply(`**Komutu kullandığınız için teşekkürler**.`)
