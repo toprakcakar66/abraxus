@@ -44,6 +44,10 @@ client.on('message', msg => {
   if (msg.content.toLocaleLowerCase() === "sa") {
     msg.reply(`**Aleyküm Selam**`)
   }
+  
+  if (msg.content.toLocaleLowerCase() === prefix + "kanalat") {
+    msg.reply(`www.twitch.tv/gratannn`)
+  }
 
   if (msg.content === prefix + "manisöyle") {
     function get_random(list) {
